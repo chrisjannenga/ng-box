@@ -6,13 +6,20 @@ import { AuthComponent } from './auth.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { PasswordResetComponent } from './password-reset/password-reset.component';
+import {NgZorroAntdModule, NzCardModule, NzTabsModule} from 'ng-zorro-antd';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
   declarations: [AuthComponent, LoginComponent, SignupComponent, PasswordResetComponent],
   imports: [
     CommonModule,
-    AuthRoutingModule
-  ]
+    AuthRoutingModule,
+    NzCardModule,
+    NzTabsModule,
+    NgZorroAntdModule,
+    ReactiveFormsModule
+  ],
+  exports: [SignupComponent, LoginComponent, PasswordResetComponent, AuthComponent]
 })
 export class AuthModule { }

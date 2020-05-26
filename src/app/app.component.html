@@ -45,9 +45,14 @@
         </span>
       </div>
     </nz-header>
-    <nz-content>
+    <nz-content *ngIf="authenticated">
       <div class="inner-content">
         <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+    <nz-content *ngIf="!authenticated">
+      <div class="inner-content">
+        <app-auth></app-auth>
       </div>
     </nz-content>
   </nz-layout>

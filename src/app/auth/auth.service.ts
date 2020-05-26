@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { BehaviorSubject } from 'rxjs';
-import { clearTimeout } from 'timers';
 
 const BACKEND_URL = environment.apiURL + '/auth/';
 
