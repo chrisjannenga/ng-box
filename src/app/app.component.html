@@ -8,27 +8,76 @@
     <div class="sidebar-logo">
       <a href="https://ng.ant.design/" target="_blank">
         <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
-        <h1>Ant Design Of Angular</h1>
+        <h1>MICA</h1>
       </a>
     </div>
-    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
+    <ul nz-menu nzTheme="dark" nzMode="vertical" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu nzClosed nzTitle="Home" nzIcon="home">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">Welcome</a>
+            <a routerLink="/welcome">Overview</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a>Monitor</a>
+            <a>Reports</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a>Workplace</a>
+            <a>History</a>
           </li>
         </ul>
       </li>
-      <li nz-submenu nzOpen nzTitle="Form" nzIcon="form">
+      
+      <li nz-submenu nzClosed nzTitle="Project Management" nzIcon="bars">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a>Basic Form</a>
+            <a>Overview</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Tasks</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Cycles</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Reports</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzClosed nzTitle="Asset Management" nzIcon="bank">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a>Livestock</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Tools</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Vehicles</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Land</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzClosed nzTitle="Human Resources" nzIcon="team">
+        <ul>
+          <li nz-submenu nzTitle="Staff">
+            <ul>
+              <li nz-menu-item>Full Time</li>
+              <li nz-menu-item>Part Time</li>
+            </ul>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Privileges</a>
+          </li>
+        </ul>
+      </li>
+      <li nz-submenu nzClosed nzTitle="Settings" nzIcon="setting">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a>Account</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a>Privileges</a>
           </li>
         </ul>
       </li>
