@@ -21,7 +21,7 @@
   padding: 20px 24px;
   font-size: 20px;
   cursor: pointer;
-  transition: all .3s,padding 0s;
+  transition: all 1s,padding 0s;
 }
 
 .trigger:hover {
@@ -77,4 +77,5 @@ nz-content {
   padding: 24px;
   background: #fff;
   height: 100%;
+  overflow: auto;
 }
