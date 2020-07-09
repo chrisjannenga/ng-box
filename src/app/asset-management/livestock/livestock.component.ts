@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LivestockComponent implements OnInit {
 
+  webcamActive = false;
+  codeReader = false;
+
+   codeText: string;
+
+  changeText(result: string) {
+    this.codeText = result;
+  }
+
   constructor() { }
 
   ngOnInit(): void {

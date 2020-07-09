@@ -1,1 +1,22 @@
-<p>livestock works!</p>
+<button nz-button nzType="primary" nzShape="circle" (click)="webcamActive = !webcamActive"><i nz-icon nzType="camera"></i></button>
+<button nz-button nzType="default" nzShape="circle" (click)="codeReader = !codeReader"><i nz-icon nzType="camera"></i></button>
+
+<nz-card *ngIf="webcamActive" style="width:300px;" nzTitle="ngx-webcam" [nzExtra]="extraTemplate">
+    <webcam></webcam>
+</nz-card>
+<ng-template #extraTemplate>
+    <a>More</a>
+</ng-template>
+
+<nz-card *ngIf="codeReader" style="width:300px;" nzTitle="QR Code REader" [nzExtra]="extraTemplateTwo">
+    <zxing-scanner [formats]="['QR_CODE']" (scanSuccess)=changeText($event)></zxing-scanner>
+</nz-card>
+<ng-template #extraTemplateTwo>
+    <a>More</a>
+</ng-template>
+
+
+
+
+<h1>{{ codeText }}</h1>
+
